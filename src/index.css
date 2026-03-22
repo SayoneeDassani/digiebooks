@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Deep navy theme */
+  --background: 216 65% 11%; /* #0a192f */
+  --foreground: 223 100% 95%; /* #e6f1ff */
+  --muted: 218 35% 20%; /* #112240-ish */
+  --muted-foreground: 227 17% 62%; /* #8892b0 */
+  --popover: 218 35% 22%; /* slightly lighter navy */
+  --popover-foreground: 223 100% 95%;
+  --card: 218 35% 18%; /* #0f1f3a */
+  --card-foreground: 223 100% 95%;
+  --border: 218 35% 26%; /* #233554 */
+  --input: 218 35% 26%;
+  --primary: 166 100% 70%; /* #64ffda */
+  --primary-foreground: 216 65% 11%;
+  --primary-hsl: 166 100% 70%;
+  --secondary: 218 35% 22%;
+  --secondary-foreground: 223 100% 95%;
+  --accent: 218 35% 22%;
+  --accent-foreground: 223 100% 95%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 166 100% 70%;
+  --radius: 12px;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  @apply bg-background text-foreground antialiased;
+  background-image: none;
+}
+
+::selection {
+  @apply bg-primary/20;
+}
+
+.container {
+  @apply max-w-6xl;
+}
