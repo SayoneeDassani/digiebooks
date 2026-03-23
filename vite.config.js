@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // Use BASE_URL for GitHub Pages (e.g. "/repo-name/"); defaults to root for other hosts.
-  base: process.env.BASE_URL || '/',
+  // Default to GitHub Pages path; allow override for forks/previews.
+  base: process.env.BASE_URL || '/digiebooks/',
   plugins: [react()],
 })
