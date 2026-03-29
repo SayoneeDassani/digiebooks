@@ -37,7 +37,7 @@ function TopBar({ sections = fallbackSections, onNavigate, activeSection }) {
 
   return (
     <header className="sticky top-0 z-50">
-      <div className="border-b border-border/60 bg-background/90 backdrop-blur">
+      <div className="border-b border-primary/60 bg-primary text-primary-foreground shadow-sm backdrop-blur">
         <div className="container flex h-16 items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <button
@@ -56,7 +56,7 @@ function TopBar({ sections = fallbackSections, onNavigate, activeSection }) {
               <button
                 key={item.id}
                 onClick={() => handleNavigate(item.id)}
-                className="rounded-md px-4 py-2 text-sm font-semibold uppercase tracking-wide text-foreground/70 transition-colors hover:text-foreground hover:bg-muted/60"
+                className="rounded-md px-4 py-2 text-sm font-semibold uppercase tracking-wide text-primary-foreground/80 transition-colors hover:text-primary-foreground hover:bg-primary-foreground/10"
               >
                 {item.label}
               </button>
@@ -67,7 +67,7 @@ function TopBar({ sections = fallbackSections, onNavigate, activeSection }) {
             <button
               type="button"
               onClick={() => setOpen((prev) => !prev)}
-              className="rounded-full p-2 text-foreground transition-colors hover:bg-accent"
+              className="rounded-full p-2 text-primary-foreground transition-colors hover:bg-primary-foreground/10"
               aria-label="Toggle navigation"
             >
               {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -78,7 +78,7 @@ function TopBar({ sections = fallbackSections, onNavigate, activeSection }) {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="border-b border-border/60 bg-background/95 shadow-lg lg:hidden">
+        <div className="border-b border-primary/60 bg-primary text-primary-foreground shadow-lg lg:hidden">
           <div className="container py-4">
             <nav className="flex flex-col gap-2 text-sm font-semibold uppercase tracking-wide">
               {sections
@@ -87,7 +87,7 @@ function TopBar({ sections = fallbackSections, onNavigate, activeSection }) {
                 <button
                   key={item.id}
                   onClick={() => handleNavigate(item.id)}
-                  className="w-full rounded-lg bg-muted/60 px-4 py-3 text-left font-semibold uppercase tracking-wide text-foreground transition-colors hover:bg-primary/10"
+                  className="w-full rounded-lg bg-primary-foreground/10 px-4 py-3 text-left font-semibold uppercase tracking-wide text-primary-foreground transition-colors hover:bg-primary-foreground/15"
                 >
                   {item.label}
                 </button>

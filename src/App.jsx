@@ -3,7 +3,6 @@ import {
   ArrowRight,
   Briefcase,
   CheckCircle2,
-  Clock3,
   FolderGit2,
   Mail,
   MapPin,
@@ -15,8 +14,6 @@ import TopBar from './components/TopBar'
 import { Badge } from './components/ui/badge'
 import { Button } from './components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
-import { Input } from './components/ui/input'
-import { Textarea } from './components/ui/textarea'
 import { cn } from './lib/utils'
 
 const sections = [
@@ -36,12 +33,12 @@ const stats = [
 
 const values = [
   {
-    title: 'Transparent delivery',
-    description: 'Shared backlog, live notes, and code you can inspect anytime.',
+    title: 'Shared project roadmap',
+    description: 'Weekly updates in plain language, so you always know what’s shipping next.',
   },
   {
-    title: 'No black boxes',
-    description: 'Decisions documented, tradeoffs explained, and zero surprise handoffs.',
+    title: 'Transparent code access',
+    description: 'Review progress anytime with shared development access where it helps your team.',
   },
   {
     title: 'Craft over hype',
@@ -52,51 +49,51 @@ const values = [
 const services = [
   {
     icon: Sparkles,
-    title: 'AI Solutions',
-    description: 'Automate the boring work and turn raw data into signals your team can act on.',
+    title: 'AI solutions',
+    description: 'Operational AI that works the way your team works—assistants, insights, and automation with safeguards baked in.',
   },
   {
     icon: ShieldCheck,
-    title: 'Web Applications',
-    description: 'High-performance, cloud-native web apps with observability, security, and room to grow.',
+    title: 'Custom software',
+    description: 'Foundational platforms shaped around your workflows, built alongside you to stay clean, scalable, and secure.',
+  },
+  {
+    icon: FolderGit2,
+    title: 'Web apps',
+    description: 'Fast, reliable web apps your customers enjoy—instrumented for uptime, clarity, and calm support.',
   },
   {
     icon: Briefcase,
-    title: 'Mobile Apps',
-    description: 'Premium cross-platform experiences with reliable sync, offline care, and smooth releases.',
-  },
-  {
-    icon: Clock3,
-    title: 'Product Strategy',
-    description: 'The bridge between idea and roadmap—scope, risks, milestones, and a plan to ship.',
+    title: 'Mobile apps',
+    description: 'Premium cross-platform apps with rock-solid sync, offline care, and releases you can trust.',
   },
 ]
 
 const portfolio = [
   {
-    name: 'ALFAA Website',
-    summary: 'A brand-forward marketing site with clear paths to conversion and easy content updates.',
-    tags: ['Web', 'Design System', 'SEO'],
-    metric: 'Launch-ready web presence',
+    name: 'AI PM tool',
+    summary: 'Decision support for product leads—automated briefs, impact estimates, and rollout checklists that stay in sync.',
+    tags: ['AI', 'Product ops', 'Delivery'],
+    metric: 'Faster product decisions',
   },
   {
-    name: 'ALFAA PWA',
-    summary: 'Progressive web app that stays fast on flaky networks and feels native on any device.',
-    tags: ['PWA', 'Performance', 'Offline-first'],
-    metric: 'Cross-device product surface',
+    name: 'Player transfer portal PWA',
+    summary: 'Progressive web app for scouts and agents with offline capture, real-time eligibility checks, and clear next actions.',
+    tags: ['PWA', 'Sports tech', 'Offline-first'],
+    metric: 'Seamless field workflows',
   },
   {
-    name: 'Product Strategy Playbook',
-    summary: 'A repeatable roadmap framework that links business goals to shipping milestones.',
-    tags: ['Strategy', 'Roadmap', 'Delivery'],
-    metric: 'Aligned teams',
+    name: 'CRM rebuild',
+    summary: 'Revenue team workspace with clear roles, faster search, and automated follow-ups that feel personal.',
+    tags: ['CRM', 'Revops', 'Security'],
+    metric: 'Cleaner pipeline visibility',
   },
 ]
 
 const contactMethods = [
-  { icon: Phone, label: 'Call', value: '+1 (415) 555-2048' },
-  { icon: Mail, label: 'Email', value: 'hello@digigeeks.studio' },
-  { icon: MapPin, label: 'HQ', value: 'Remote-first • US & UK' },
+  { icon: Phone, label: 'Call (UK)', value: '07552 550062' },
+  { icon: Mail, label: 'Email', value: 'hello@digigeeks.com' },
+  { icon: MapPin, label: 'HQ', value: 'United Kingdom' },
 ]
 
 function SectionHeading({ eyebrow, title, description, badgeClassName = '' }) {
@@ -162,7 +159,7 @@ function App() {
             <div className="relative space-y-8">
               <SectionHeading
                 title="Turning complex ideas into scalable reality."
-                description="DigiGeeks is the team founders call for custom software, AI solutions, web apps, and mobile apps—built with clear plans, clean code, and zero fluff."
+                description="DigiGeeks is the founders’ team to call for AI solutions, custom software, web apps, and mobile apps—built with clear plans, clean code, and zero fluff."
               />
               <div className="flex flex-wrap items-center gap-3">
                 <Button size="lg" onClick={() => scrollToSection('services')}>
@@ -192,7 +189,7 @@ function App() {
             <SectionHeading
               eyebrow="About us"
               title="We’re a remote-first, craft-focused extension of your team."
-              description="We pair with you inside your tools, keep the roadmap shared, and sweat the details so your product stays intentional, performant, and reliable."
+              description="We pair with you inside your tools, keep progress shared in plain language, and sweat the details so your product stays intentional, performant, and reliable."
             />
             <div className="grid gap-6 lg:grid-cols-[1.1fr_1fr]">
               <Card className="border-dashed border-primary/30 bg-muted/15 text-foreground">
@@ -201,7 +198,9 @@ function App() {
                     <Sparkles className="h-5 w-5 text-primary" />
                     How we work
                   </CardTitle>
-                  <CardDescription>Transparent from day one: shared backlog, weekly demos, and open repos. Every decision is explained—no black boxes.</CardDescription>
+                  <CardDescription>
+                    Transparent from day one: a shared project roadmap, weekly demos, and transparent code access where it helps. Every decision comes with the rationale in plain English.
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm text-foreground/80">
                   <p>We run discovery, UX, and engineering in the same cadence so ideas turn into working software fast.</p>
@@ -230,7 +229,7 @@ function App() {
             <SectionHeading
               eyebrow="Services"
               title="Build the thing—without the noise."
-              description="Custom software, AI solutions, web apps, and mobile apps delivered as a focused, senior team."
+              description="AI solutions, custom software, web apps, and mobile apps—shipped by a senior team that moves with you."
             />
             <div className="grid gap-6 md:grid-cols-2">
               {services.map((service) => (
@@ -257,7 +256,7 @@ function App() {
             <SectionHeading
               eyebrow="Portfolio"
               title="Selected work"
-              description="Recent launches across SaaS, fintech, and data products."
+              description="Recent launches across AI, sports tech, and revenue teams."
             />
             <div className="grid gap-6 md:grid-cols-3">
               {portfolio.map((project) => (
@@ -287,36 +286,22 @@ function App() {
           <section id="contact" className="space-y-8 rounded-3xl border border-border/80 bg-card/80 p-8 shadow-lg">
             <SectionHeading
               eyebrow="Contact"
-              title="Tell us what you’re building."
-              description="Low pressure, straight talk. Share a few details and we’ll reply with a practical path forward."
+              title="Tell us what you’re vision!"
+              description="Reach us directly for any software needs."
             />
-            <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
-              <div className="space-y-4">
-                {contactMethods.map((item) => (
-                  <div key={item.label} className="flex items-center gap-3 rounded-xl border border-border/60 bg-muted/30 p-4">
-                    <item.icon className="h-5 w-5 text-primary" />
-                    <div>
-                      <p className="text-sm font-semibold">{item.label}</p>
-                      <p className="text-sm text-muted-foreground">{item.value}</p>
-                    </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {contactMethods.map((item) => (
+                <div key={item.label} className="flex items-center gap-3 rounded-xl border border-border/60 bg-muted/30 p-4">
+                  <item.icon className="h-5 w-5 text-primary" />
+                  <div>
+                    <p className="text-sm font-semibold">{item.label}</p>
+                    <p className="text-sm text-muted-foreground">{item.value}</p>
                   </div>
-                ))}
-              </div>
-              <Card className="border-border/60 bg-muted/20 shadow-sm">
-                <CardHeader>
-                  <CardTitle>Project brief</CardTitle>
-                  <CardDescription>We’ll reach out with next steps and a time to meet.</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <Input placeholder="Your name" />
-                  <Input placeholder="Work email" type="email" />
-                  <Input placeholder="Company" />
-                  <Textarea placeholder="What are you building?" rows={4} />
-                  <Button className="w-full">Send message</Button>
-                </CardContent>
-              </Card>
+                </div>
+              ))}
             </div>
           </section>
+
         </main>
       </div>
       <Footer onNavigate={scrollToSection} />
