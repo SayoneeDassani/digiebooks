@@ -91,8 +91,8 @@ const portfolio = [
 ]
 
 const contactMethods = [
-  { icon: Phone, label: 'Call (UK)', value: '07552 550062' },
-  { icon: Mail, label: 'Email', value: 'hello@digigeeks.com' },
+  { icon: Phone, label: 'Call (UK)', value: '+44 7552 550062' },
+  { icon: Mail, label: 'Email', value: 'sam@digigeeks.co.uk' },
   { icon: MapPin, label: 'HQ', value: 'United Kingdom' },
 ]
 

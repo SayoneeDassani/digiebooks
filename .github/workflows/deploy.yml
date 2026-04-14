@@ -37,7 +37,7 @@ jobs:
       - name: Build
         env:
           # Ensure asset paths work when served from https://<user>.github.io/<repo>/
-          BASE_URL: https://SayoneeDassani.github.io/digiebooks/
+          #BASE_URL: https://digiegeeks.co.uk/
         run: npm run build
 
       - name: Upload artifact

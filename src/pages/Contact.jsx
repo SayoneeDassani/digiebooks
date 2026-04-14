@@ -13,14 +13,14 @@ function Contact() {
           <div className="flex items-center gap-3 rounded-lg bg-white/70 p-3 shadow-sm">
             <Mail className="h-5 w-5 text-primary" />
             <div>
-              <p className="font-semibold text-foreground">hello@digiegeeks.com</p>
+              <p className="font-semibold text-foreground">sam@digigeeks.co.uk</p>
               <p>Direct line to the founders.</p>
             </div>
           </div>
           <div className="flex items-center gap-3 rounded-lg bg-white/70 p-3 shadow-sm">
             <Phone className="h-5 w-5 text-primary" />
             <div>
-              <p className="font-semibold text-foreground">07552 550062</p>
+              <p className="font-semibold text-foreground">+44 7552 550062</p>
               <p>UK number — call or WhatsApp.</p>
             </div>
           </div>
