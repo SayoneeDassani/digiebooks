@@ -35,10 +35,11 @@ jobs:
         run: npm ci
 
       - name: Build
-        env:
+        run: npm run build
+        #env:
           # Ensure asset paths work when served from https://<user>.github.io/<repo>/
           #BASE_URL: https://digiegeeks.co.uk/
-        run: npm run build
+        #run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
