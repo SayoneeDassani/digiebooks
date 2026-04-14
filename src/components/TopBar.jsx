@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Mail, Menu, Phone, X } from 'lucide-react'
 import { cn } from '../lib/utils'
-import dgLogo from '../assets/dglogo.png'
+import dgLogo from '../assets/Digie_Geeks.png'
 
 const fallbackSections = [
   { id: 'home', label: 'Home' },
@@ -43,9 +43,9 @@ function TopBar({ sections = fallbackSections, onNavigate, activeSection }) {
             <button
               type="button"
               onClick={() => handleNavigate('home')}
-              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md p-0"
             >
-              <img src={dgLogo} alt="DigiGeeks logo" className="h-12 w-auto" />
+              <img src={dgLogo} alt="DigiGeeks logo" className="h-16 w-[88px] object-contain" />
             </button>
           </div>
 
